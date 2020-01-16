@@ -31,6 +31,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
       <v-spacer />
+      <logo />
     </v-app-bar>
     <v-content>
       <v-container>
@@ -41,11 +42,15 @@
 </template>
 
 <script>
+import Logo from '../components/Logo'
 export default {
+  components: {
+    Logo
+  },
   data () {
     return {
       clipped: true,
-      drawer: false,
+      drawer: true,
       items: [
         {
           icon: 'mdi-apps',
@@ -60,6 +65,9 @@ export default {
       ],
       title: 'Coin'
     }
+  },
+  beforeMount () {
+    this.drawer = window.innerWidth > 1265
   }
 }
 </script>

@@ -1,58 +1,32 @@
 <template>
   <v-layout
-    column
     justify-center
     align-center
   >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <div class="text-center">
-        <logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          App content will be here
-        </v-card-title>
-        <v-card-text>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/support"
-          >
-            Support
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
+    <v-row>
+      <v-col
+        cols="12"
+        md="6"
+        class="pt-0"
+      >
+        <Wallets />
+      </v-col>
+      <v-col
+        cols="12"
+        md="6"
+        class="pt-0"
+      >
+        <RecentTransactions />
+      </v-col>
+    </v-row>
   </v-layout>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Wallets from '../components/Wallets'
+import RecentTransactions from '../components/RecentTransactions'
 
 export default {
-  components: {
-    Logo
-  }
+  components: { RecentTransactions, Wallets }
 }
 </script>
