@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import Logo from '../components/Logo'
+import Logo from '../components/Logo';
 export default {
   components: {
     Logo
@@ -64,10 +64,10 @@ export default {
         }
       ],
       title: 'Coin'
-    }
+    };
   },
   beforeMount () {
-    this.drawer = window.innerWidth > 1265
+    this.drawer = window.innerWidth > 1265;
   }
-}
+};
 </script>

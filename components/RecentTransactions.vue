@@ -26,7 +26,7 @@
         nuxt
         to="/support"
       >
-        Support
+        Show all
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -34,5 +34,5 @@
 <script>
 export default {
   name: 'RecentTransactions'
-}
+};
 </script>

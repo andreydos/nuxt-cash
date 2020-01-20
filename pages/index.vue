@@ -23,10 +23,10 @@
 </template>
 
 <script>
-import Wallets from '../components/Wallets'
-import RecentTransactions from '../components/RecentTransactions'
+import Wallets from '../components/Wallets';
+import RecentTransactions from '../components/RecentTransactions';
 
 export default {
   components: { RecentTransactions, Wallets }
-}
+};
 </script>

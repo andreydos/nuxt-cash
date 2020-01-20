@@ -5,19 +5,7 @@
     </v-card-title>
     <v-card-text>
       <hr class="my-3">
-      <a
-        href="https://nuxtjs.org/"
-        target="_blank"
-      >
-        Nuxt Documentation
-      </a>
-      <br>
-      <a
-        href="https://github.com/nuxt/nuxt.js"
-        target="_blank"
-      >
-        Nuxt GitHub
-      </a>
+      <p>{{ wallets }}</p>
     </v-card-text>
     <v-card-actions>
       <v-spacer />
@@ -26,13 +14,21 @@
         nuxt
         to="/support"
       >
-        Support
+        New wallet
       </v-btn>
     </v-card-actions>
   </v-card>
 </template>
 <script>
+import { mapState } from 'vuex';
 export default {
-  name: 'Wallets'
-}
+  name: 'Wallets',
+  computed: {
+    ...mapState('wallet', ['wallets']),
+    ...mapState('user', ['user'])
+  },
+  mounted () {
+    this.$store.dispatch('wallet/loadWallets');
+  }
+};
 </script>

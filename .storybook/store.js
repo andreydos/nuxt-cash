@@ -1,8 +1,7 @@
-import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
 // You can do the same for getters, mutations and states
-import actions from '@/store/actions';
+import actions from '~/store/wallet';
 let store = new Vuex.Store({
     actions: actions
 });
