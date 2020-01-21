@@ -23,13 +23,14 @@ export default {
     const wallets = [];
     const currenciesIsoNames = Object.keys(constEnums.Currency);
     for (let i = 0; count > i; i++) {
-      const randomIsoName = currenciesIsoNames[getRandomArbitrary(0, currenciesIsoNames.length)];
+      const randomIsoName = currenciesIsoNames[getRandomArbitrary(0, currenciesIsoNames.length - 1)];
       wallets.push({
         id: i,
+        name: `name_${i}`,
         currency: randomIsoName,
         amount: getRandomArbitraryWithDecimals(0, 1000),
         color: getRandomColor(),
-        isEnabled: Math.random() > 0.1
+        isEnabled: Math.random() > 0.2
       });
     }
     return wallets;
