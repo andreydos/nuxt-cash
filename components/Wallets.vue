@@ -16,7 +16,7 @@
     </div>
     <v-card-actions>
       <v-btn
-        v-if="enabledWallets.length < wallets.length"
+        v-if="wallets && enabledWallets.length < wallets.length"
         @click="disabledWalletsVisible = !disabledWalletsVisible"
         color="primary"
       >
@@ -46,14 +46,20 @@ export default {
   computed: {
     ...mapState('wallet', ['wallets']),
     enabledWallets () {
-      return this.wallets.filter((w) => {
-        return w.isEnabled;
-      });
+      if (this.wallets && this.wallets.length) {
+        return this.wallets.filter((w) => {
+          return w.isEnabled;
+        });
+      }
+      return [];
     },
     disabledWallets () {
-      return this.disabledWalletsVisible && this.wallets.filter((w) => {
-        return !w.isEnabled;
-      });
+      if (this.wallets && this.wallets.length) {
+        return this.disabledWalletsVisible && this.wallets.filter((w) => {
+          return !w.isEnabled;
+        });
+      }
+      return [];
     },
     visibleWalletsCount () {
       return this.enabledWallets.length + this.disabledWallets.length;
