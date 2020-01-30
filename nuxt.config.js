@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/es5/util/colors';
 
 export default {
   mode: 'universal',
@@ -91,4 +91,4 @@ export default {
   server: {
     port: 3005
   }
-}
+};

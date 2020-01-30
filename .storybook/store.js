@@ -1,9 +1,11 @@
 import Vuex from 'vuex';
 import axios from 'axios';
 // You can do the same for getters, mutations and states
-import actions from '~/store/wallet';
+import {state, mutations, actions } from '@/store/wallet';
 let store = new Vuex.Store({
-    actions: actions
+    state,
+    mutations,
+    actions
 });
 /**
  Bind Axios to Store as we don't have access to Nuxt's $axios instance here. See caveat below.

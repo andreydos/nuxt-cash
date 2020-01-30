@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/vue';
 import store from '../.storybook/store';
-import Logo from './Logo';
+import Wallets from './Wallets';
 
-storiesOf('Logo', module)
+storiesOf('Wallets', module)
   .add('As a component', () => ({
-    components: { Logo },
+    components: { Wallets },
     store,
-    template: '<Logo />'
+    template: '<Wallets />'
   }));

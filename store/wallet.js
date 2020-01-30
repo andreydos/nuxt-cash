@@ -1,4 +1,4 @@
-import mocks from '~/helpers/mocks';
+import mocks from '@/helpers/mocks';
 
 export const state = () => ({
   wallets: []
@@ -17,5 +17,11 @@ export const actions = {
     } else {
       commit('setWallets', mocks.generateFakeWallets(5));
     }
+  }
+};
+
+export const getters = {
+  wallets (state) {
+    return state.wallets;
   }
 };

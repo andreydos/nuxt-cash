@@ -1,7 +1,7 @@
 {
   "name": "cash",
   "version": "1.0.0",
-  "description": "Control yout cash with this app",
+  "description": "Control your cash with this app",
   "author": "andreydos",
   "private": true,
   "scripts": {
@@ -27,6 +27,7 @@
     "@nuxtjs/dotenv": "^1.4.0"
   },
   "devDependencies": {
+    "@mdi/font": "^4.8.95",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/stylelint-module": "^3.1.0",
